@@ -2,6 +2,6 @@
 - **week_01**
     - [x] 01_task
 - **week_02:**
-    - [ ] box_model
+    - [x] box_model
 - **week_03:**
     - [ ] 03_exercise
