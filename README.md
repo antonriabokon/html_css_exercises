@@ -6,4 +6,4 @@
 - **week_03:**
     - [x] 03_exercise
 - **week_04:**
-    - [ ] 04_exercise
+    - [x] 04_exercise
