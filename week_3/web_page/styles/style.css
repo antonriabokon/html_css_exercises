@@ -25,7 +25,7 @@ background-color:#fcdec9;
 background-size: cover;
 }
 .hat {
-    background-image: url("/images/hat.png");
+    background-image: url("../images/hat.png");
     height: 350px;
     background-size: cover;
     background-position: center;
