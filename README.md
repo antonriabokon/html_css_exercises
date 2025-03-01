@@ -7,3 +7,5 @@
     - [x] 03_exercise
 - **week_04:**
     - [x] 04_exercise
+- **week_06:**
+    - [x] 06_portfolio
