@@ -9,13 +9,69 @@ html {
 }
 
 header {
-    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(253, 227, 196);
-    padding-left: 300px;
-    padding-right: 300px;
+    padding: 15px 150px 15px 150px;
+    background-color: #ecf39e;
+    height: auto;
+}
+
+#switch-button {
+    background-color: rgb(64, 170, 14);
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px rgba(8, 49, 2, 0.662);
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    transition: 0.4s;
+}
+
+#switch-button:hover {
+    background-color: white;
+    color: rgb(30, 91, 4);
+}
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(148, 158, 140, 0.723);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#baner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: aliceblue;
+    height: 60vh;
+    width: 60vw;
+} 
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(22, 12, 0);;
+    padding: 8px;
+    border-radius: 6px;
+    border: solid 2px rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    transition: 0.4s;
+}
+
+#cover.hidden {
+    display: none;
 }
 
 nav {
@@ -25,22 +81,23 @@ nav {
 
 #logo {
     font-family: Ubuntu, sans-serif;
-    animation-name: logo;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    animation: logo 4s ease-in-out infinite;
     cursor: none;
+    transition: 0.4s ease;
+    font-size: 26px;
 }
 
 @keyframes logo {
-    0%  {color: rgb(253, 227, 196);}
-    25%   {color: rgb(154, 64, 0);}
-    50%  {color: rgb(154, 64, 0);}
-    100%  {color: rgb(253, 227, 196);}
+    0%   { color: #ecf39e; }
+    25%  { color: #90a955; }  
+    50%  { color: #4f772d; }  
+    75%  { color: #31572c; }
+    100% { color: #132a13; }
 }
 
 nav a {
     font-family: Raleway, sans-serif;
-    color: rgb(154, 64, 0);
+    color: #132a13;
     text-decoration: none;
     transition: 0.4s;
     cursor: pointer;
@@ -51,13 +108,13 @@ nav a:hover {
 }
 
 #about {
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 200px;
+    padding-right: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(171, 119, 56);
-    height: 45vh;
+    background-color: #90a955;
+    min-height: 45vh;
     font-size: 18px;
     color: white;
 }
@@ -89,20 +146,36 @@ nav a:hover {
 }
 
 #about_img img {
-    width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 20px black;
 }
 
+#open-button{
+    background-color: rgb(64, 170, 14);;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px rgba(11, 81, 2, 0.912);
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    transition: 0.4s;
+    align-self: flex-start;
+    margin-top: 15px;
+}
+#open-button:hover {
+    background-color: white;
+    color: rgb(30, 91, 4);
+}
+
 #projects {
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 200px;
+    padding-right: 200px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(121, 73, 0);
-    height: 45vh;
+    background-color: #4f772d;
+    min-height: 45vh;
 }
 
 #projects_head {
@@ -128,7 +201,7 @@ nav a:hover {
     height: 180px;
     width: 180px;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px rgba(73, 132, 7, 0.5);
     padding: 0px;
     background-color: bisque;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -136,12 +209,12 @@ nav a:hover {
 }
 
 #skills {
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 200px;
+    padding-right: 200px;
     padding-bottom: 125px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(52, 29, 1);
+    background-color: #31572c;
     min-height: 45vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;  
@@ -160,15 +233,11 @@ nav a:hover {
 #contact {
     display: flex;
     justify-content: space-between;
-    padding-left: 300px;
-    padding-right: 300px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(22, 12, 0);
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #132a13;
 }
 
 #owner {
@@ -179,17 +248,224 @@ nav a:hover {
 }
 
 #contact_link {
+    flex-direction: column;
+}
+
+#contact_link a {
     font-family: Raleway, sans-serif;
-    color: rgb(154, 64, 0);
+    color:#139f13;
     text-decoration: none;
     transition: 0.4s;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+}
+    
+#contact_link a:hover {
+    color: rgb(207, 207, 207);
 }
 
-#contact_link:hover {
-    color: white;
+#back-button {
+    padding: 10px;
+    background-color: rgb(64, 170, 14);;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px rgba(11, 81, 2, 0.912);
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    transition: 0.4s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
 }
 
+#back-button:hover {
+    background-color: white;
+    color: rgb(30, 91, 4);
+}
+
+body.switch-mode header {
+    background-color: #c2b2b4;
+}
+
+body.switch-mode nav a {
+    color: #3a4454;
+}
+
+body.switch-mode nav a:hover {
+    color:#f5dddd;
+}
+
+body.switch-mode #logo {
+    animation: logo-switch 3s ease-in-out infinite;
+}
+
+@keyframes logo-switch {
+    0%   { color: #c2b2b4; } 
+    25%  { color: #6b4e71; } 
+    50%  { color: #3a4454; }  
+    75%  { color: #53687e; }
+    100% { color: #f5dddd; }
+}
+
+body.switch-mode #switch-button {
+    background-color: #152b50;
+
+}
+
+body.switch-mode #switch-button:hover {
+    background-color: #f4f4f4;
+    color: #0c2755;
+}
+
+body.switch-mode #about {
+    background-color: #6b4e71;
+}
+
+body.switch-mode #open-button {
+    background-color: #051d47;
+    border-color: #ffffff;
+    box-shadow: 0px 0px 10px #ffffff;
+}
+
+body.switch-mode #open-button:hover {
+    background-color: #f4f4f4;
+    color: #0c2755;
+}
+
+body.switch-mode #close-button {
+    background-color: #051d47;
+    border-color: #00009b;
+    box-shadow: 0px 0px 10px #020793;
+}
+body.switch-mode #projects {
+    background-color: #3a4454;
+}
+
+body.switch-mode #skills {
+    background-color: #53687e;
+}
+
+body.switch-mode #contact {
+    background-color:#f5dddd;
+}
+
+body.switch-mode #back-button {
+    background-color: #152b50;
+    border-color: #ffffff;
+    box-shadow: 0px 0px 10px #ffffff;
+}
+
+body.switch-mode #back-button:hover {
+    background-color: #f4f4f4;
+    color: #0c2755;
+}
+
+body.switch-mode #contact_link a {
+    color: #53687e;
+}
+
+body.switch-mode #contact_link a:hover {
+    color: #6b4e71;
+}
+
+body.switch-mode #owner {
+    color: #53687e;
+}
+
+body.switch-mode .project {
+    background-color: rgb(234, 234, 234);
+    border: solid 3px white;
+    box-shadow: 0px 0px 20px #fffefe;
+}
+
+body.switch-mode #about_img img {
+    box-shadow: 0px 0px 20px #ffffff;
+}
+
+@media screen and (max-width: 1200px) {
+    #header {
+        align-items: center;
+        text-align: center;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+
+    nav {
+        flex-flow: column wrap;
+        justify-content: center;
+        gap: 10px; 
+        width: 100%;
+        font-size: 12px;
+    }
+
+    #about {
+        font-size: 16px;
+    }
+
+    #logo {
+        font-size: 18px;
+    }
+
+    #project_container {
+        flex-flow: column wrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        align-items: center;
+        text-align: center;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    nav {
+        flex-flow: column wrap;
+        justify-content: center;
+        gap: 7px; 
+        width: 100%;
+        font-size: 8px;
+    }
+
+    #logo {
+        font-size: 16px;
+    }
+    
+    #about {
+        font-size: 12px;
+    }
+
+    #project_container {
+        flex-flow: column wrap;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #header {
+        align-items: center;
+        text-align: center;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    nav {
+        flex-flow: column wrap;
+        justify-content: center;
+        gap: 7px; 
+        width: 100%;
+        font-size: 8px;
+    }
+
+    #logo {
+        font-size: 16px;
+    }
+    
+    #about {
+        font-size: 12px;
+    }
+
+    #project_container {
+        flex-flow: column wrap;
+    }
+}
